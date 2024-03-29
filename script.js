@@ -5,10 +5,11 @@ const showMoreBtn = document.getElementById("show-more-btn")
 
 let keyword = ""
 let page = 1
+let accessKey = "Mocjmu9EjEcKM7xKkf6RcVHWpN_8IeqchhYpZ_fn7x8"
 
 async function searchImage() {
     keyword = searchBox.value;
-    const url = `https://api.unsplash.com/search/photos?page=${page}&query=${keyword}&client_id=Mocjmu9EjEcKM7xKkf6RcVHWpN_8IeqchhYpZ_fn7x8&per_page=12`;
+    const url = `https://api.unsplash.com/search/photos?page=${page}&query=${keyword}&client_id=${accessKey}&per_page=12`;
 
     const response = await fetch(url);
     const data = await response.json();
